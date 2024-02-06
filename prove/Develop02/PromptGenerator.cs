@@ -12,7 +12,7 @@ public class PromptGenerator
     public string GetRandomPrompt()
     {
         Random randomGenerator = new Random();
-        int random = randomGenerator.Next(1, 6);
+        int random = randomGenerator.Next(0, _prompts.Count);
         return _prompts[random];
     }
 }

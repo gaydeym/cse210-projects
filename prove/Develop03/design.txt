@@ -1,0 +1,42 @@
+Class: Scripture
+    Attributes:
+        * _reference : Reference
+        * _words : List<Word>
+    
+    Constructor:
+        * Scripture(Reference : Reference, text : string)
+
+    Behaviors:
+        * HideRandomWords(numberToHide : int) : void
+        * GetDisplayText() : string
+        * IsCompletelyHidden() : bool
+
+
+Class: Reference
+    Attributes:
+        * _book : string
+        * _chapter : int
+        * _verse : int
+        * _endVerse : int
+    
+    Constructor:
+        * Reference(book : string, chapter : int, verse : int)
+        * Reference(book : string, chapter : int, startVerse : int, endVerse : int)
+    
+    Behaviors:
+        * GetDisplayText() : string
+
+
+Class: Word
+    Attributes:
+        * _text : string
+        * _isHidden : bool
+    
+    Constructor:
+        * Word(text : string)
+
+    Behaviors:
+        * Hide() : void
+        * Show() : void
+        * IsHidden() : bool
+        * GetDisplayText() : string

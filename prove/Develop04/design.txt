@@ -1,0 +1,44 @@
+Class: Activity
+    Attributes:
+        * _name: string
+        * _description: string
+        * _duration : int
+
+    Behaviors:
+        * Activity()
+        * DisplayStartingMessage() : void
+        * DisplayEndingMessage() : void
+        * ShowSpinner(seconds: int ) : void
+        * ShowCountDown(seconds: int): void
+
+
+Class: BreathingActivity : Activity
+    Behaviors:
+        * BreathingActivity()
+        * Run(): void
+
+
+Class: ListingActivity : Activity
+    Attributes:
+        * _count : int
+        * _prompts: List<string> 
+
+    Behaviors:
+        * ListingActivity()
+        * Run(): void
+        * GetRandomPrompt(): void
+        * GetListFromUser(): List<string>
+
+
+Class: ReflectingActivity : Activity
+    Attributes:
+        * _prompts: List<string>
+        * _questions: List<string>
+
+    Behaviors:
+        * ReflectingActivity()
+        * Run(): void
+        * GetRandomPrompt(): string
+        * GetRandomQuestion(): string
+        * DisplayPrompt(): void
+        * DisplayQuestions(): void

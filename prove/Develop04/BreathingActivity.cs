@@ -1,19 +1,12 @@
 public class BreathingActivity : Activity
 {
-    private string _breatheOut = "NowBreathe Out...";
-    private string _breatheIn = "Breathe In...";
-
     public void DisplayBreathing(int time)
     {
-
-        int breatheTimeAssistant = 5;
-
         while (time != 0)
         {
-            breatheTimeAssistant = 5;
+            int breatheTimeAssistant = 5;
             Console.WriteLine();
-            Console.WriteLine();
-            Console.Write(_breatheIn);
+            Console.WriteLine("Breathe in...");
 
             while (breatheTimeAssistant != 0)
             {
@@ -22,14 +15,11 @@ public class BreathingActivity : Activity
                 Console.Write("\b \b");
 
                 breatheTimeAssistant -= 1;
-
                 time -= 1;
             }
 
             breatheTimeAssistant = 5;
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.Write(_breatheOut);
+            Console.WriteLine("Now breathe out...");
 
             while (breatheTimeAssistant != 0)
             {
@@ -38,10 +28,10 @@ public class BreathingActivity : Activity
                 Console.Write("\b \b");
 
                 breatheTimeAssistant -= 1;
-
                 time -= 1;
             }
         }
+        
         DisplayMessageEnd();
     }
 }

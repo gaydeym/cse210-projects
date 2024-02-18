@@ -1,20 +1,19 @@
 public class ListingActivity : Activity
 {
-    private string[] _promptsQuestion = {"Who are people that you appreciate?",
+    private string[] _prompts = {"Who are people that you appreciate?",
                                 "What are personal strengths of yours?",
                                 "Who are people that you have helped this week?",
                                 "When have you felt the Holy Ghost this month?",
-                                "Who are some of your personal heroes"};
-    private int _entryCount = 0;
+                                "Who are some of your personal heroes?"};
+    private int _count = 0;
 
     public void DisplayListing(int time)
     {
         var random = new Random();
-        int index = random.Next(_promptsQuestion.Count());
-
+        int index = random.Next(_prompts.Count());
 
         Console.WriteLine("List as many responses as you can to the following prompt:\n");
-        Console.WriteLine($"--- {_promptsQuestion[index]} ---\n");
+        Console.WriteLine($"--- {_prompts[index]} ---\n");
 
         YouMayBegin();
 
@@ -43,7 +42,7 @@ public class ListingActivity : Activity
 
     private void Write(int time)
     {
-        _entryCount = 0;
+        _count = 0;
         DateTime startTimeNow = DateTime.Now;
         DateTime endTimeFinish = startTimeNow.AddSeconds(time);
         DateTime currentTimeCurrent = DateTime.Now;
@@ -53,11 +52,11 @@ public class ListingActivity : Activity
             Console.Write("> ");
             Console.ReadLine();
 
-            _entryCount += 1;
+            _count += 1;
             currentTimeCurrent = DateTime.Now;
         }
 
-        Console.WriteLine($"\nYou listed {_entryCount} items!");
+        Console.WriteLine($"\nYou listed {_count} items!");
 
     }
 }

@@ -1,0 +1,177 @@
+Program 1:
+Class: Comment: Tracks the author's name and the content of the comment.
+	Attributes:
+		* _author : string
+		* _content: string
+
+	Behaviors:
+		* Display() : void
+
+
+Class: Video: Represents a video with title, author, and duration.
+	Attributes:
+		* _title : string
+		* _author : string
+		* _length : int
+
+	Behaviors:
+		* AddComment(author : string, text : string) : void
+		* Display() : void
+
+
+
+Program 2:
+Class: Address: Represents an address.
+	Attributes:
+		* _streetAdress : string
+		* _city: string
+		* _state: string
+		* _country: string
+
+	Behaviors:
+		* IsUsa() : bool
+		* GetStringRepresentation() : string
+
+
+Class: Customer: Represents a customer with a name and an address.
+	Attributes:
+		* _name : string
+		* _address: Address
+
+	Behaviors:
+		* IsUsa() : bool
+		* ShippingAddress() : string
+
+
+Class: Order: Represents an order containing products and a customer.
+   Attributes:
+       * _products: List<Product>
+       * _customer: Customer
+   
+   Behaviors:
+       * AddProduct(name: string, id: string, price: double, quantity: int): void
+       * CalculateTotalCost(): double
+       * PackingLabel(): string
+       * ShippingLabel(): string
+       * CustomerAttributes(name: string, street: string, city: string, state: string, country: string): void
+
+
+Class: Product: Represents a product with a name, id, price, and quantity.
+   Attributes:
+       * _name: string
+       * _id: string
+       * _price: double
+       * _quantity: int
+   
+   Behaviors:
+       * Product(name: string, id: string, price: double, quantity: int): void
+       * GetTotalPrice(): double
+
+
+
+Program 3:
+Class: Address: Represents an address.
+   Attributes:
+       * _address: string
+   
+   Behaviors:
+       * Address(addy: string): void
+       * GetAddress(): string
+       * SetAddress(addy: string): void
+
+
+Class: Event: Represents an event with a title, description, date, time, and address.
+   Attributes:
+       * _title: string
+       * _description: string
+       * _date: string
+       * _time: string
+       * _address: Address
+   
+   Behaviors:
+       * Event(title: string, desc: string, date: string, time: string, address: string): void
+       * StandardDetails(): string
+       * abstract FullDetails(): string
+       * abstract ShortDescription(): string
+
+
+Class: Lecture : Event: Represents a lecture event with a speaker and capacity.
+   Attributes:
+       * _speaker: string
+       * _capacity: int
+   
+   Behaviors:
+       * Lecture(title: string, desc: string, date: string, time: string, address: string, speaker: string, cap: int): void
+       * FullDetails(): string
+       * ShortDescription(): string
+
+
+Class: Outdoor : Event: Represents an outdoor event with weather information.
+   Attributes:
+       * _weather: string
+   
+   Behaviors:
+       * Outdoor(title: string, desc: string, date: string, time: string, address: string, weather: string): void
+       * FullDetails(): string
+       * ShortDescription(): string
+
+
+Class: Reception : Event: Represents a reception event with RSVP via email.
+   Attributes:
+       * _email: string
+   
+   Behaviors:
+       * Reception(title: string, desc: string, date: string, time: string, address: string, email: string): void
+       * FullDetails(): string
+       * ShortDescription(): string
+
+
+
+Program 4:
+Class: Cycling : Exercise: Represents a cycling exercise with speed information.
+   Attributes:
+       * _speed: double
+   
+   Behaviors:
+       * Cycling(date: string, len: double, speed: double): void
+       * Distance(): double
+       * Pace(): double
+       * Speed(): double
+       * Summary(): string
+
+
+Class: Exercise: Represents an exercise with date and length.
+   Attributes:
+       * _date: string
+       * _length: double
+   
+   Behaviors:
+       * Exercise(date: string, len: double): void
+       * Distance(): double
+       * Speed(): double
+       * Pace(): double
+       * Summary(): string
+
+
+Class: Running : Exercise: Represents a running exercise with distance information.
+   Attributes:
+       * _distance: double
+   
+   Behaviors:
+       * Running(date: string, length: double, dist: double): void
+       * Distance(): double
+       * Speed(): double
+       * Pace(): double
+       * Summary(): string
+
+
+Class: Swimming : Exercise: Represents a swimming exercise with laps information.
+   Attributes:
+       * _laps: double
+   
+   Behaviors:
+       * Swimming(date: string, len: double, laps: double): void
+       * Distance(): double
+       * Speed(): double
+       * Pace(): double
+       * Summary(): string
